@@ -43,7 +43,7 @@ class PointSpec: QuickSpec {
             }
         }
 
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit)
         describe("on iOS only") {
             beforeEach {
                 view.layoutMargins = UIEdgeInsets(top: 10, left: 20, bottom: 30, right: 40)

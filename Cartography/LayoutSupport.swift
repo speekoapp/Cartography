@@ -8,7 +8,7 @@
 
 import Foundation
 
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit)
     import UIKit
 
     public final class LayoutSupport: LayoutItem {
@@ -24,12 +24,14 @@ import Foundation
     }
 
     public extension UIViewController {
+        @available(visionOS, unavailable)
         var car_topLayoutGuide : LayoutSupport {
             get {
                 return LayoutSupport(layoutGuide: self.topLayoutGuide)
             }
         }
         
+        @available(visionOS, unavailable)
         var car_bottomLayoutGuide : LayoutSupport {
             get {
                 return LayoutSupport(layoutGuide: self.bottomLayoutGuide)

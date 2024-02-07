@@ -30,7 +30,7 @@ class TestView: View {
 #endif
 }
 
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit)
 class TestWindow: UIWindow {
 
     override var safeAreaInsets: UIEdgeInsets { return .zero }

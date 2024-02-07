@@ -7,7 +7,7 @@
 //
 
 import Foundation
-#if os(iOS) || os(tvOS)
+#if canImport(UIKit)
     import UIKit
 #endif
 
